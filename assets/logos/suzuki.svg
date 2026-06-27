@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" preserveAspectRatio="xMidYMid meet">
+  <style>.t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>
+  <text x="32" y="68" class="t" font-weight="900" font-size="48" fill="#3DA5D9" letter-spacing="-0.02em">S</text>
+  <text x="68" y="68" class="t" font-weight="900" font-size="48" fill="#F5EDE0" letter-spacing="-0.02em">UZUKI</text>
+  <line x1="32" y1="78" x2="280" y2="78" stroke="#3DA5D9" stroke-width="2"/>
+  <text x="156" y="92" text-anchor="middle" class="t" font-weight="500" font-size="9" fill="#F5EDE0" letter-spacing="0.5em" opacity="0.6">AUTOMOTIVE</text>
+</svg>

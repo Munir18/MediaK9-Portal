@@ -1,0 +1,170 @@
+/* ================================================================
+   MK9 PORTAL - responsive.css
+   Handles mobile/tablet breakpoints for Dashboard & Admin Panel
+   All form pages inherit from page.css .c-row{1fr} at 900px
+   ================================================================ */
+
+/* ── Touch devices: restore native cursor ──────────────────── */
+@media (hover: none), (pointer: coarse) {
+  body { cursor: auto !important; }
+  .cur-dot, .cur-ring { display: none !important; }
+  .btn, .mk9-sidebar__nav-item, .c-form input,
+  .c-form select, .c-form textarea,
+  .reel-tab, .stat, .back-top { cursor: pointer !important; }
+}
+
+/* ── 1024px - tablet landscape ─────────────────────────────── */
+@media (max-width: 1024px) {
+  .mk9-admin { padding: 100px 24px 48px; }
+  .mk9-admin__stats { grid-template-columns: repeat(3, 1fr); }
+  .mk9-admin__table-wrapper { overflow-x: auto; }
+  .mk9-admin__table { min-width: 720px; }
+}
+
+/* ── 900px - tablet portrait / large mobile ─────────────────── */
+@media (max-width: 900px) {
+
+  /* Dashboard layout */
+  .d-layout {
+    flex-direction: column;
+    padding: 90px 16px 40px;
+    gap: 24px;
+  }
+  .d-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    gap: 16px;
+  }
+  .d-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mk9-sidebar__nav-item {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  /* Admin panel */
+  .mk9-admin {
+    padding: 90px 16px 40px;
+  }
+  .mk9-admin__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .mk9-admin__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .mk9-admin__tabs {
+    gap: 6px;
+    padding-bottom: 12px;
+  }
+  .mk9-admin__tab {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  .mk9-admin__table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .mk9-admin__table { min-width: 640px; }
+
+  /* Admin impersonation panel */
+  #mk9-bdm-impersonate-select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Modals */
+  .mk9-admin__modal {
+    padding: 24px 20px;
+    max-height: 95vh;
+  }
+  .mk9-admin__detail {
+    grid-template-columns: 1fr;
+  }
+  .mk9-modal__content {
+    padding: 24px 20px;
+  }
+
+  /* Forms */
+  .c-form { padding: 20px 16px; }
+  .c-row { grid-template-columns: 1fr; }
+  .mk9-file-upload { padding: 16px; }
+
+  /* Profile grid */
+  .d-card div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 600px - small mobile ───────────────────────────────────── */
+@media (max-width: 600px) {
+  /* Nav */
+  nav.top {
+    top: 8px;
+    max-width: calc(100% - 12px);
+    padding: 5px 5px 5px 10px;
+    gap: 4px;
+  }
+  .nav-list a { font-size: 11px; padding: 5px 8px; }
+  .nav-cta { padding: 6px 12px; font-size: 11px; }
+
+  /* Hero text */
+  .p-hero { padding: 90px 16px 32px; }
+  .p-hero h1 { font-size: 32px; margin-bottom: 16px; }
+
+  /* Dashboard stats: 1 column on tiny screens */
+  .d-stats { grid-template-columns: 1fr; }
+
+  /* Admin stats: still 2 columns */
+  .mk9-admin__stats { grid-template-columns: repeat(2, 1fr); }
+  .mk9-admin__stat { padding: 14px; }
+  .mk9-admin__stat-value { font-size: 24px; }
+
+  /* Bonus bar card */
+  .d-card div[style*="justify-content:space-between"] {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* Buttons full-width on mobile */
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+
+  /* Footer */
+  .f-top { grid-template-columns: 1fr; gap: 24px; }
+  .f-giant { font-size: 32px; }
+  .f-bot { flex-direction: column; gap: 6px; text-align: center; }
+
+  /* Admin action buttons wrapping */
+  .mk9-admin__actions { flex-wrap: wrap; gap: 6px; }
+  .mk9-admin__action-btn { padding: 5px 10px; font-size: 11px; }
+
+  /* Sidebar profile card compact */
+  .d-profile-av { width: 40px; height: 40px; font-size: 16px; }
+  .d-profile-name { font-size: 16px; }
+
+  /* Modal overlay full-screen on tiny screens */
+  .mk9-admin__modal-overlay { padding: 8px; }
+  .mk9-admin__modal { border-radius: 12px; }
+
+  /* Admin BDM impersonation toolbar: vertical */
+  div[style*="mk9-bdm-impersonate"] {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ── Print: hide decorative elements ───────────────────────── */
+@media print {
+  .bg-aurora, .bg-grid, .bg-grain,
+  .cur-dot, .cur-ring, nav.top,
+  .scroll-prog, .back-top { display: none !important; }
+  body { background: #fff; color: #000; }
+}

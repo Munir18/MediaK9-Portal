@@ -1,0 +1,461 @@
+/* ═══════════════════════════════════════════════════════════════════
+   MK9 BDM PORTAL - Form Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── Form Container ─────────────────────────────────────────────── */
+.mk9-form {
+    width: 100%;
+}
+
+.mk9-form__group {
+    margin-bottom: 20px;
+}
+
+.mk9-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .mk9-form__row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── Labels ─────────────────────────────────────────────────────── */
+.mk9-form__label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--mk9-cream);
+    margin-bottom: 8px;
+}
+
+.mk9-form__label--required::after {
+    content: ' *';
+    color: var(--mk9-marmalade);
+}
+
+.mk9-form__hint {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--mk9-cream-muted);
+    margin-top: 4px;
+}
+
+/* ─── Input Fields ───────────────────────────────────────────────── */
+.mk9-form__input,
+.mk9-form__select,
+.mk9-form__textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--mk9-ink-2);
+    border: 1px solid var(--mk9-hairline-2);
+    border-radius: var(--mk9-radius-sm);
+    color: var(--mk9-cream);
+    font-family: var(--mk9-font);
+    font-size: 0.9375rem;
+    transition: all var(--mk9-transition);
+    outline: none;
+}
+
+.mk9-form__input:focus,
+.mk9-form__select:focus,
+.mk9-form__textarea:focus {
+    border-color: var(--mk9-marmalade);
+    box-shadow: 0 0 0 3px var(--mk9-marmalade-glow);
+    background: var(--mk9-ink-3);
+}
+
+.mk9-form__input::placeholder,
+.mk9-form__textarea::placeholder {
+    color: var(--mk9-cream-muted);
+}
+
+.mk9-form__input--error,
+.mk9-form__select--error,
+.mk9-form__textarea--error {
+    border-color: var(--mk9-danger);
+    box-shadow: 0 0 0 3px var(--mk9-danger-bg);
+}
+
+.mk9-form__input--success {
+    border-color: var(--mk9-success);
+    box-shadow: 0 0 0 3px var(--mk9-success-bg);
+}
+
+.mk9-form__textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.mk9-form__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%239A938A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.mk9-form__select option {
+    background: var(--mk9-ink);
+    color: var(--mk9-cream);
+}
+
+/* ─── Error Message ──────────────────────────────────────────────── */
+.mk9-form__error {
+    display: none;
+    font-size: 0.75rem;
+    color: var(--mk9-danger);
+    margin-top: 6px;
+    align-items: center;
+    gap: 4px;
+}
+
+.mk9-form__error.active {
+    display: flex;
+}
+
+/* ─── File Upload ────────────────────────────────────────────────── */
+.mk9-file-upload {
+    position: relative;
+    border: 2px dashed var(--mk9-hairline-2);
+    border-radius: var(--mk9-radius);
+    padding: 32px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--mk9-transition);
+    background: var(--mk9-ink-2);
+}
+
+.mk9-file-upload:hover {
+    border-color: var(--mk9-marmalade);
+    background: rgba(232, 84, 28, 0.05);
+}
+
+.mk9-file-upload.dragover {
+    border-color: var(--mk9-lime);
+    background: rgba(196, 229, 56, 0.05);
+    transform: scale(1.01);
+}
+
+.mk9-file-upload.has-file {
+    border-color: var(--mk9-success);
+    border-style: solid;
+    background: var(--mk9-success-bg);
+}
+
+.mk9-file-upload__input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.mk9-file-upload__icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--mk9-cream-muted);
+    transition: color var(--mk9-transition);
+}
+
+.mk9-file-upload:hover .mk9-file-upload__icon {
+    color: var(--mk9-marmalade);
+}
+
+.mk9-file-upload.has-file .mk9-file-upload__icon {
+    color: var(--mk9-success);
+}
+
+.mk9-file-upload__text {
+    font-size: 0.875rem;
+    color: var(--mk9-cream-dim);
+}
+
+.mk9-file-upload__text strong {
+    color: var(--mk9-marmalade);
+}
+
+.mk9-file-upload__preview {
+    display: none;
+    margin-top: 12px;
+}
+
+.mk9-file-upload__preview img {
+    max-width: 200px;
+    max-height: 120px;
+    border-radius: var(--mk9-radius-sm);
+    object-fit: cover;
+    border: 2px solid var(--mk9-hairline-2);
+}
+
+.mk9-file-upload__preview.active {
+    display: block;
+}
+
+.mk9-file-upload__name {
+    display: none;
+    font-size: 0.8125rem;
+    color: var(--mk9-success);
+    margin-top: 8px;
+    word-break: break-all;
+}
+
+.mk9-file-upload.has-file .mk9-file-upload__name {
+    display: block;
+}
+
+/* ─── Progress Steps ─────────────────────────────────────────────── */
+.mk9-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 40px;
+}
+
+.mk9-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mk9-step__number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: 2px solid var(--mk9-hairline-2);
+    color: var(--mk9-cream-muted);
+    background: transparent;
+    transition: all var(--mk9-transition);
+    flex-shrink: 0;
+}
+
+.mk9-step.active .mk9-step__number {
+    border-color: var(--mk9-marmalade);
+    background: linear-gradient(135deg, var(--mk9-marmalade), var(--mk9-marmalade-2));
+    color: #fff;
+    box-shadow: 0 0 15px rgba(232, 84, 28, 0.3);
+}
+
+.mk9-step.completed .mk9-step__number {
+    border-color: var(--mk9-success);
+    background: var(--mk9-success);
+    color: var(--mk9-black);
+}
+
+.mk9-step__label {
+    font-size: 0.8125rem;
+    color: var(--mk9-cream-muted);
+    font-weight: 500;
+    transition: color var(--mk9-transition);
+}
+
+.mk9-step.active .mk9-step__label {
+    color: var(--mk9-cream);
+}
+
+.mk9-step.completed .mk9-step__label {
+    color: var(--mk9-success);
+}
+
+.mk9-step__connector {
+    width: 40px;
+    height: 2px;
+    background: var(--mk9-hairline-2);
+    margin: 0 4px;
+    transition: background var(--mk9-transition);
+}
+
+.mk9-step.completed + .mk9-step__connector,
+.mk9-step.completed ~ .mk9-step__connector {
+    background: var(--mk9-success);
+}
+
+@media (max-width: 600px) {
+    .mk9-step__label {
+        display: none;
+    }
+
+    .mk9-step__connector {
+        width: 24px;
+    }
+}
+
+/* ─── Form Step Panels ───────────────────────────────────────────── */
+.mk9-form__panel {
+    display: none;
+    animation: mk9-slideUp 0.4s ease-out;
+}
+
+.mk9-form__panel.active {
+    display: block;
+}
+
+.mk9-form__panel-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.mk9-form__panel-desc {
+    font-size: 0.9375rem;
+    color: var(--mk9-cream-dim);
+    margin-bottom: 28px;
+}
+
+/* ─── Form Actions ───────────────────────────────────────────────── */
+.mk9-form__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--mk9-hairline);
+}
+
+.mk9-form__actions--center {
+    justify-content: center;
+}
+
+/* ─── Password Strength ──────────────────────────────────────────── */
+.mk9-password-strength {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.mk9-password-strength__bar {
+    flex: 1;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--mk9-hairline-2);
+    transition: background var(--mk9-transition);
+}
+
+.mk9-password-strength[data-strength="1"] .mk9-password-strength__bar:nth-child(1) {
+    background: var(--mk9-danger);
+}
+
+.mk9-password-strength[data-strength="2"] .mk9-password-strength__bar:nth-child(-n+2) {
+    background: var(--mk9-warning);
+}
+
+.mk9-password-strength[data-strength="3"] .mk9-password-strength__bar:nth-child(-n+3) {
+    background: var(--mk9-lime);
+}
+
+.mk9-password-strength[data-strength="4"] .mk9-password-strength__bar {
+    background: var(--mk9-success);
+}
+
+/* ─── Success Screen ─────────────────────────────────────────────── */
+.mk9-success-screen {
+    text-align: center;
+    padding: 60px 20px;
+    animation: mk9-scaleIn 0.5s ease-out;
+}
+
+.mk9-success-screen__icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--mk9-success-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 2.5rem;
+    animation: mk9-float 3s ease-in-out infinite;
+}
+
+.mk9-success-screen__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.mk9-success-screen__message {
+    color: var(--mk9-cream-dim);
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+/* ─── Login Form Specific ────────────────────────────────────────── */
+.mk9-login-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px var(--mk9-gutter);
+}
+
+.mk9-login-card {
+    width: 100%;
+    max-width: 440px;
+}
+
+.mk9-login-logo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.mk9-login-logo__brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.mk9-login-logo__sub {
+    font-size: 0.8125rem;
+    color: var(--mk9-cream-dim);
+    margin-top: 4px;
+}
+
+.mk9-form__divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0;
+    color: var(--mk9-cream-muted);
+    font-size: 0.8125rem;
+}
+
+.mk9-form__divider::before,
+.mk9-form__divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--mk9-hairline);
+}
+
+/* ─── Show/Hide Password ─────────────────────────────────────────── */
+.mk9-password-wrapper {
+    position: relative;
+}
+
+.mk9-password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--mk9-cream-muted);
+    cursor: pointer;
+    padding: 4px;
+    font-size: 1.1rem;
+    transition: color var(--mk9-transition);
+}
+
+.mk9-password-toggle:hover {
+    color: var(--mk9-cream);
+}

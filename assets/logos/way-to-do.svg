@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 110" preserveAspectRatio="xMidYMid meet">
+  <style>.t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:800}</style>
+  <text x="180" y="50" text-anchor="middle" class="t" font-size="32" fill="#F5EDE0" letter-spacing="-0.025em">WAY TO DO</text>
+  <path d="M 80 70 L 250 70 L 245 65 M 250 70 L 245 75" stroke="#5DD39E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="180" y="92" text-anchor="middle" class="t" font-weight="500" font-size="10" fill="#5DD39E" letter-spacing="0.5em">PRODUCTIVITY APP</text>
+</svg>

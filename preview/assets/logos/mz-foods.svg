@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet">
+  <style>.t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>
+  <text x="160" y="74" text-anchor="middle" class="t" font-weight="900" font-size="80" fill="#F5EDE0" letter-spacing="-0.05em">MZ</text>
+  <line x1="100" y1="86" x2="220" y2="86" stroke="#F5C842" stroke-width="2"/>
+  <text x="160" y="112" text-anchor="middle" class="t" font-weight="500" font-size="14" fill="#F5C842" letter-spacing="0.5em">FOODS</text>
+</svg>

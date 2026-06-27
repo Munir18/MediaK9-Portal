@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title> - MediaK9</title>
+<meta name="description" content="MediaK9 Campus Partnership Program - BDM Portal">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/shared.css">
+<link rel="stylesheet" href="./assets/css/page.css">
+<link rel="stylesheet" href="./assets/css/responsive.css">
+<link rel="icon" href="./assets/logos/mediak9.png" type="image/png">
+
+<link rel="stylesheet" href="./assets/css/">
+
+<script>
+window.mk9_ajax = {
+    url: '/api/portal-handler.php',
+    nonce: '',
+    home_url: '/'
+};
+window.mk9_admin = {
+    url: '/api/admin-handler.php',
+    nonce: ''
+};
+</script>
+</head>
+<body class="" data-page="portal">
+<div class="bg-aurora" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+</div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-grain" aria-hidden="true"></div>
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div>
+<nav class="top">
+  <a href="./" class="nav-mark"><img src="./assets/logos/mediak9.png" alt="Media K9"></a>
+  <ul class="nav-list">
+    <li><a href="./" class="">Home</a></li>
+    
+      
+        <li><a href="./admin" class="">Admin Panel</a></li>
+      
+        <li><a href="./dashboard" class="">Dashboard</a></li>
+      
+      <li><a href="#" class="mk9-logout-link">Logout</a></li>
+    
+      <li><a href="./login" class="">Login</a></li>
+      <li><a href="./register" class="">Apply as BDM</a></li>
+    
+  </ul>
+  <a href="https://mediak9.com" class="nav-cta" target="_blank" rel="noopener">Main Site →</a>
+</nav>
+
+
+<style>
+.mk9-form__error { display:none; color:var(--marmalade); font-size:11px; margin-top:6px; }
+.mk9-form__error.active { display:block; }
+.mk9-form__input--error { border-color:var(--marmalade) !important; }
+.mk9-file-upload { border:1px dashed var(--hairline); padding:20px; border-radius:10px; text-align:center; position:relative; transition:border-color 0.3s; cursor:pointer; margin-top:6px; background: rgba(255,255,255,0.01); }
+.mk9-file-upload:hover { border-color:var(--cream-dim); background: rgba(255,255,255,0.03); }
+.mk9-file-upload.dragover { border-color:var(--lime); background:rgba(196,229,56,.05); }
+.mk9-file-upload__input { position:absolute; inset:0; opacity:0; cursor:pointer; }
+.mk9-file-upload__icon { font-size:24px; margin-bottom:8px; }
+.mk9-file-upload__text { font-family:'Space Grotesk',sans-serif; font-size:12px; color:var(--cream-dim); }
+.mk9-file-upload__name { margin-top:8px; font-weight:600; font-size:12px; color:var(--lime); }
+.pw-wrap { position:relative; display:block; width:100%; }
+.pw-wrap input { padding-right: 44px !important; width:100%; box-sizing:border-box; }
+.pw-toggle { position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; padding:4px; color:var(--cream-muted); line-height:1; }
+.pw-toggle:hover { color:var(--cream); }
+.pw-toggle svg { width:18px; height:18px; display:block; }
+</style>
+
+<section class="p-hero" style="padding-bottom: 20px;">
+  <div class="badge">Application</div>
+  <h1 data-blur data-blur-stagger="0.06">Become a<br><span class="accent">Partner.</span></h1>
+</section>
+
+<section class="contact glow-follow" style="padding-top: 0;">
+  <div class="contact-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+    
+    <div id="mk9-registration-container">
+      <form class="c-form rv" id="mk9-registration-form" enctype="multipart/form-data" novalidate>
+        
+        <div style="margin-bottom:24px; border-bottom:1px solid var(--hairline); padding-bottom:16px;">
+          <h3 style="font-size:18px; font-weight:700;">1. Personal Information</h3>
+          <p style="font-size:13px; color:var(--cream-dim);">All fields are required.</p>
+        </div>
+        <div class="c-row">
+          <label class="mk9-form__group">Full Name <input type="text" id="mk9-full-name" name="full_name" placeholder="Muhammad Ali" required autocomplete="name"><div class="mk9-form__error" role="alert"></div></label>
+          <label class="mk9-form__group">Father's Name <input type="text" id="mk9-father-name" name="father_name" placeholder="Muhammad Ahmed" required><div class="mk9-form__error" role="alert"></div></label>
+        </div>
+        <div class="c-row">
+          <label class="mk9-form__group">Email <input type="email" id="mk9-email" name="email" placeholder="you@example.com" required autocomplete="email"><div class="mk9-form__error" role="alert"></div></label>
+          <label class="mk9-form__group">Phone <input type="tel" id="mk9-phone" name="phone" placeholder="03XX-XXXXXXX" required pattern="[0-9]{10,15}"><div class="mk9-form__error" role="alert"></div></label>
+        </div>
+        <div class="c-row">
+          <label class="mk9-form__group">Password
+            <div class="pw-wrap">
+              <input type="password" id="mk9-password" name="password" placeholder="Min. 8 characters" required autocomplete="new-password">
+              <button type="button" class="pw-toggle" aria-label="Toggle password" onclick="togglePw('mk9-password',this)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="display:none"><path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/></svg>
+              </button>
+            </div>
+            <div class="mk9-form__error" role="alert"></div>
+          </label>
+          <label class="mk9-form__group">Confirm Password
+            <div class="pw-wrap">
+              <input type="password" id="mk9-confirm-password" name="confirm_password" placeholder="Re-enter password" required autocomplete="new-password">
+              <button type="button" class="pw-toggle" aria-label="Toggle confirm password" onclick="togglePw('mk9-confirm-password',this)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="display:none"><path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/></svg>
+              </button>
+            </div>
+            <div class="mk9-form__error" role="alert"></div>
+          </label>
+        </div>
+
+        <div style="margin-top:40px; margin-bottom:24px; border-bottom:1px solid var(--hairline); padding-bottom:16px;">
+          <h3 style="font-size:18px; font-weight:700;">2. Identity &amp; Secure Documents</h3>
+          <p style="font-size:13px; color:var(--cream-dim);">CNIC number is AES-256 encrypted before storage. Files are encrypted at rest.</p>
+        </div>
+        <div class="c-row" style="margin-bottom:16px;">
+          <label class="mk9-form__group" style="flex:1;">
+            <span style="display:block;margin-bottom:8px;font-size:.8125rem;font-weight:600;">CNIC Number <span style="color:var(--marmalade)">*</span></span>
+            <div style="position:relative;">
+              <input
+                type="text"
+                id="cnic_number"
+                name="cnic_number"
+                class="mk9-input"
+                placeholder="00000-0000000-0"
+                maxlength="15"
+                inputmode="numeric"
+                autocomplete="off"
+                required
+                style="letter-spacing:2px;font-size:16px;font-family:monospace;"
+              >
+            </div>
+            <div class="mk9-form__error" role="alert"></div>
+            <div style="font-size:11px;color:var(--cream-muted);margin-top:6px;">Enter 13 digits only &mdash; dashes are added automatically. Example: 6110169898892</div>
+          </label>
+        </div>
+        <div class="c-row" style="margin-bottom:16px;">
+          <label class="mk9-form__group">University Card Front
+            <div class="mk9-file-upload">
+              <input type="file" name="university_card_front" class="mk9-file-upload__input" accept="image/jpeg,image/png,image/webp,application/pdf" required>
+              <div class="mk9-file-upload__icon"></div>
+              <div class="mk9-file-upload__text">Required</div>
+              <div class="mk9-file-upload__name"></div>
+            </div>
+          </label>
+          <label class="mk9-form__group">University Card Back <span style="font-size:9px">(Optional)</span>
+            <div class="mk9-file-upload">
+              <input type="file" name="university_card_back" class="mk9-file-upload__input" accept="image/jpeg,image/png,image/webp,application/pdf">
+              <div class="mk9-file-upload__icon"></div>
+              <div class="mk9-file-upload__text">Optional</div>
+              <div class="mk9-file-upload__name"></div>
+            </div>
+          </label>
+        </div>
+        <label class="mk9-form__group" style="margin-bottom:32px;">Profile Picture
+          <div class="mk9-file-upload">
+            <input type="file" name="profile_picture" class="mk9-file-upload__input" accept="image/jpeg,image/png,image/webp" required>
+            <div class="mk9-file-upload__icon"></div>
+            <div class="mk9-file-upload__text">JPG/PNG only</div>
+            <div class="mk9-file-upload__name"></div>
+          </div>
+        </label>
+        
+        <div class="mk9-form__group" style="margin-top:16px; margin-bottom:24px;">
+          <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer;">
+            <input type="checkbox" id="accept_terms" name="accept_terms" value="1" required style="margin-top:4px; width:16px; height:16px; accent-color:var(--lime); flex-shrink:0;">
+            <span style="font-size:13px; line-height:1.5; color:var(--cream-dim);">
+              I agree to the <a href="/terms.html" target="_blank" style="color:var(--lime); text-decoration:none;">Terms &amp; Conditions</a> and <a href="/privacy.html" target="_blank" style="color:var(--lime); text-decoration:none;">Privacy Policy</a>. <span style="color:var(--marmalade)">*</span>
+            </span>
+          </label>
+          <div class="mk9-form__error" role="alert" style="margin-top:6px;"></div>
+        </div>
+
+        <div style="display:flex; justify-content:center; margin-top:24px;">
+          <button type="submit" class="btn btn-pri" id="mk9-register-submit" style="width:100%; justify-content:center;">Submit Application</button>
+        </div>
+      </form>
+    </div>
+
+    <div style="margin-top:24px;text-align:center;border-top:1px solid var(--hairline);padding-top:24px;">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--cream-muted);margin-bottom:12px;">Already applied?</p>
+      <a href="./login" class="btn btn-sec" style="width:100%;justify-content:center;">Login</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="f-top">
+    <div class="f-mark">
+      <img src="./assets/logos/mediak9.png" alt="Media K9">
+      <h3>An Islamabad studio building brands that <span class="accent">compound</span>.</h3>
+      <p>We engineer the small details until they add up to something undeniable. Strategy, design, and growth - under one roof, for a small list of partners we believe in.</p>
+    </div>
+    <div class="f-col">
+      <h4>Portal</h4>
+      <a href="./">Home</a>
+      <a href="./login">BDM Login</a>
+      <a href="./register">Become a BDM</a>
+      <a href="./apply">Client Application</a>
+      <a href="https://mediak9.com/" target="_blank" rel="noopener">Media K9 Main Site</a>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <a href="https://mediak9.com/service-brand-strategy.html" target="_blank" rel="noopener">Brand strategy</a>
+      <a href="https://mediak9.com/service-social-content.html" target="_blank" rel="noopener">Social & content</a>
+      <a href="https://mediak9.com/service-performance-ads.html" target="_blank" rel="noopener">Performance ads</a>
+      <a href="https://mediak9.com/service-web-product.html" target="_blank" rel="noopener">Web & product</a>
+      <a href="https://mediak9.com/service-crm-lifecycle.html" target="_blank" rel="noopener">CRM & lifecycle</a>
+    </div>
+    <div class="f-col">
+      <h4>Reach us</h4>
+      <a href="mailto:contact@mediak9.com">contact@mediak9.com</a>
+      <a href="tel:+923345441307">+92 334 5441307</a>
+      <p style="color:var(--cream-dim);margin-top:10px;font-size:12px;line-height:1.55">24-D, 4th Floor, Rasheed Plaza,<br>Blue Area, Islamabad</p>
+    </div>
+  </div>
+  <div class="f-giant">
+    <span>Media <span class="accent">K9</span></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--cream-muted);text-transform:uppercase;font-weight:500;line-height:1.5">Est. Islamabad<br>2019 - 2026</span>
+  </div>
+  <div class="f-bot">
+    <span>©  Media K9. Crafted with care.</span>
+    <span>Made in Islamabad</span>
+  </div>
+</footer>
+<script src="./assets/js/app.js"></script>
+<script src="./assets/js/portal.js"></script>
+
+<script src="./assets/js/"></script>
+
+</body>
+</html>

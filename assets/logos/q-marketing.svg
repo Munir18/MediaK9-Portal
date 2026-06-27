@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" preserveAspectRatio="xMidYMid meet">
+  <style>.t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}</style>
+  <circle cx="55" cy="50" r="32" fill="none" stroke="#F5EDE0" stroke-width="3"/>
+  <text x="55" y="64" text-anchor="middle" class="t" font-weight="800" font-size="36" fill="#F5EDE0">Q</text>
+  <line x1="73" y1="68" x2="79" y2="78" stroke="#F5EDE0" stroke-width="3" stroke-linecap="round"/>
+  <text x="110" y="60" class="t" font-weight="700" font-size="20" fill="#F5EDE0" letter-spacing="0.32em">MARKETING</text>
+  <text x="110" y="78" class="t" font-weight="400" font-size="9" fill="#C4E538" letter-spacing="0.4em">REAL ESTATE - ISB</text>
+</svg>

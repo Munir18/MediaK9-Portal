@@ -1,0 +1,27 @@
+# Database configuration & credentials
+config/config.php
+
+# Local uploads and logs (exclude everything in uploads except .htaccess)
+uploads/*
+!uploads/.htaccess
+
+# System & temporary logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE configuration
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Scratch scripts & temporary data migrations
+scratch/
+scratch-*.php
+cnic_migrate.php
+db_migrate_cnic.sql
