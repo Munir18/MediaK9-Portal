@@ -50,7 +50,7 @@ mk9-portal-standalone/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Munir18/MediaK9-Portal.git
+   git clone https://github.com/Munir18/Portal.git
    ```
 
 2. **Configure Database & Credentials**:
